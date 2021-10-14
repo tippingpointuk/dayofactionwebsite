@@ -1,0 +1,69 @@
+---
+title: Day of Action
+tagline: Do this very important thing. Now
+description: |-
+  This is why the important thing is important.
+
+  I am telling you, it is really imporant.
+url: https://tippingpointuk.github.io
+baseurl: /dayofactionwebsite
+theme: jekyll-theme-chaos
+permalink: pretty
+
+# Theme settings
+background_color: "#FFF0E3"
+brand_color: '#DD0000'
+logo: ''
+logo_light: ''
+logo_square: ''
+invert_brand_text: true
+invert_accent_text: true
+
+# Social media links
+instagram: ''
+twitter: ''
+facebook: ''
+
+# Count down date
+counter: 29-Oct-2051 9am
+
+# Website timezone.
+timezone: Europe/London
+
+future: true # To allow future trainings/events etc
+
+copyright_notice: # Extra copyright notices, can be markdown formatted
+
+
+collections:
+  posts:
+    permalink: "/posts/:title/"
+  faqs:
+    output: false
+  resources:
+    output: true
+
+
+# Import collections and data from Airtable - for the majority of content
+# management. See https://tippingpointuk.github.io/jekyll-airtable-import for
+# more info.
+plugins:
+- jekyll-airtable-import
+airtable:
+  faqs:
+    app: appHld1J1pbRWx2hD
+    table: tblC1IPmd6b5YvURl
+    view: viwshhasm9KuQO78g
+  resources:
+    app: appHld1J1pbRWx2hD
+    table: tblVRoiZIQKy6TWw4
+    view: viw0T1FytAZERgFDC
+    combine: true
+  posts:
+    app: appHld1J1pbRWx2hD
+    table: tblTG0ddEFTNg1XEd
+    view: viwyragNQyhru08jV
+    collection:
+      slug: title
+      content: content
+      layout: post

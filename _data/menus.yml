@@ -1,0 +1,18 @@
+---
+footer:
+- url: "/"
+  weight: 1
+  title: Sign Up
+header:
+- url: "/#trainings"
+  weight: 4
+  title: Trainings
+- url: "/#join"
+  weight: 3
+  title: Updates
+- url: "/#resources"
+  title: Resources
+  weight: 2
+- url: "/#map"
+  title: Take Action
+  weight: 1
