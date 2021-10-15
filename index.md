@@ -39,9 +39,9 @@ blocks:
   text: |-
     # Resources
 
-    Here are all the resources you’ll need::
+    Here are all the resources you’ll need:
 
-    {% include resources.html %}
+    {% include nested-blog-list.html data=site.resources date=false share_buttons=false %}
   id: "resources"
 - text: |-
     # Find out more

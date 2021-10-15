@@ -1,0 +1,151 @@
+---
+label: Block Layout
+hide_body: true
+fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: page
+  hidden: true
+- name: header
+  type: field_group
+  config: {}
+  fields:
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Text
+  - name: buttons
+    type: field_group_list
+    fields:
+    - name: text
+      type: text
+      config:
+        required: false
+      label: Text
+    - name: target
+      type: text
+      config:
+        required: false
+      label: Target
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Buttons
+  - name: border_bottom
+    type: field_group
+    config: {}
+    fields:
+    - name: image
+      type: file
+      config:
+        maxSize: 64
+      label: Image
+    - name: reflect
+      type: boolean
+      label: Reflect?
+    label: Border Bottom
+  label: Header
+- name: blocks
+  type: field_group_list
+  fields:
+  - name: map
+    type: boolean
+    label: map
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Text
+  - name: id
+    type: text
+    config:
+      required: false
+    label: JumpLink
+  - name: buttons
+    type: field_group_list
+    fields:
+    - name: text
+      type: text
+      config:
+        required: false
+      label: text
+    - name: target
+      type: text
+      config:
+        required: false
+      label: target
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Buttons
+    showOnly:
+      field: map
+  - name: decoration
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Decoration
+    showOnly:
+      field: map
+  - name: background_image
+    type: file
+    config:
+      maxSize: 64
+    label: Background Image
+    showOnly:
+      field: map
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Blocks
+- name: invert
+  type: select
+  default: even
+  config:
+    required: false
+    options:
+    - odd
+    - even
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Invert Color For Blocks which are...
+- name: credits
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Credits
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+  description: Image displayed on link preveiws
+pages:
+- index.md
+- index.md

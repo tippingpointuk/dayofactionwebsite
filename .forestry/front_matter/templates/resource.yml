@@ -1,0 +1,59 @@
+---
+label: Resource
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  default: post
+  hidden: true
+- type: text
+  name: title
+  label: Title
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- type: file
+  name: top_image
+  label: 'Header Image '
+  description: The image that fits above the content
+- name: top_quote
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Top Quote
+  description: The quote that appears before the content
+- type: file
+  name: image
+  label: Image in link previews
+- name: credits
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Credits
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+  description: custom resource slug
+- name: summary
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Summary
+pages:
+- _resources/how-to-make-a-thing.md

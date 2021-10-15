@@ -49,21 +49,22 @@ collections:
 # more info.
 plugins:
 - jekyll-airtable-import
+- jekyll-menus # Only included to use the Forestry Menus option
+
 airtable:
   faqs:
     app: appHld1J1pbRWx2hD
     table: tblC1IPmd6b5YvURl
     view: viwshhasm9KuQO78g
   resources:
-    app: appHld1J1pbRWx2hD
     table: tblVRoiZIQKy6TWw4
     view: viw0T1FytAZERgFDC
-    combine: true
+    collection:
+      layout: g-doc
+      slug: title
   posts:
-    app: appHld1J1pbRWx2hD
     table: tblTG0ddEFTNg1XEd
     view: viwyragNQyhru08jV
     collection:
       slug: title
-      content: content
       layout: post
