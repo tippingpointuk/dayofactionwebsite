@@ -13,7 +13,7 @@ sections:
   path: ''
   label: All Pages
   create: all
-  match: "**/*.md"
+  match: "**/!(index).md"
   exclude: _*/**
   templates:
   - stories
