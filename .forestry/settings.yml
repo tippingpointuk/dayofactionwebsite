@@ -14,7 +14,7 @@ sections:
   label: All Pages
   create: all
   match: "**/*.md"
-  exclude: _*
+  exclude: _*/**
   templates:
   - stories
   - block-layout
