@@ -11,6 +11,10 @@ module Jekyll
       puts ids
       f = URI.open("https://docs.google.com/feeds/download/documents/export/Export?id="+ ids[0] +"&exportFormat=html")
       html = Nokogiri::HTML.parse(f)
+      # Need to, ideally, do more formatting to:
+      # * Bold classes to <strong> tags
+      # * Italic classes to <em> tags
+      # * Properly nest lists
       return html.css('body').inner_html
     end
   end

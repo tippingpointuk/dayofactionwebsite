@@ -1,0 +1,69 @@
+---
+layout: page
+---
+{% capture image %}
+{%if page.featured_image_url %}
+<img src="{{ page.featured_image_url }}" alt="">
+{% endif %}
+{% endcapture %}
+
+{% capture title %}{{ page.title }}{% endcapture %}
+
+{% capture share_buttons %}
+<div class="Chaos-Flex-Line">{% include share-links.html page=page %}</div>
+{% endcapture %}
+
+{% assign start_day = page.start_date | date:  "%j" %}
+{% assign end_day = page.end_date | date: "%j" %}
+
+{% capture date %}
+{% if start_day < end_day %}
+<p class="Chaos-Event-Date">
+  <time>{{ page.start_date | date: "%k:%M %A %e %B" }}</time>
+  to
+  <time>{{ page.end_date | date: "%k:%M %A %e %B" }}</time>
+</p>
+{% else %}
+<p class="Chaos-Event-Date">
+  {{ page.start_date | date: "%A %e %B" }}
+</p>
+<p class="Chaos-Event-Date">
+  <time>{{ page.start_date | date: "%k:%M" }}</time>{% if page.end_date %}
+  to
+  <time>{{ page.end_date | date: "%k:%M" }}</time>{% endif %}
+</p>
+{% endif %}
+{% endcapture %}
+
+{% capture address %}
+<address class="">
+  {{ page.location.venue }},
+  {% for l in page.location.address_lines %}{{ l }},{% endfor %}
+  {{ page.location.locality  }},
+  {{ page.location.postal_code  }}
+</address>
+<p><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{ page.location.location.latitude }}%2C{{ page.location.location.longitude }}">Get directions...</a></p>
+{% endcapture %}
+{% capture map %}
+<div id="Single-Action-Map" map_location="{{ page.location | jsonify | url_encode | replace: "+", "%20" }}"></div>
+<script type="text/javascript" src="/assets/js/an-event-page.js"> </script>
+{% endcapture %}
+
+
+{% capture form %}
+{% unless page.embed.error %}
+{{page.embed.embed_standard_layout_only_styles}}
+{% elsif page.browser_url %}
+{%  assign an_event_slug = page.browser_url | split: "://" | last | split: "/" | last %}
+<link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css'/>
+<script src='https://actionnetwork.org/widgets/v4/event/{{ an_event_slug }}?format=js&source=widget'></script>
+<div id='can-event-area-{{ an_event_slug }}' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
+{% else %}
+<div class="Chaos-Flex-Line">
+  <a href="{{ page.browser_url }}"><span class="Chaos-Button">Sign Up</span></a>
+</div>
+{% endunless %}
+{% endcapture %}
+
+{% assign t = site.templates | where: "slug",  "an-event" | first  %}
+{{ t.content | liquify | markdownify }}
