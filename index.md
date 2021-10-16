@@ -22,19 +22,23 @@ header:
     image: ""
     reflect: true # Reflect as if submerged in water
 blocks:
-- decoration: "![](http://modernfarmer.com/wp-content/uploads/2014/03/smart_pig.jpg)"
-  text: |-
-    # A block title
+- text: |-
+    # We demand
 
-    some info
-  map: false
-  background_image: ''
+    {% include demands.html demands=site.data.demands %}
   id: what
   buttons:
     - text: A jump button
       target: "#resources"
     - text: An external link
       target: "https://example.com"
+- text: |-
+    # Events
+
+    {% assign events = site.events | sort: "start_date" %}
+    {% include events-gallery.html date_field='start_date' %}
+  id: trainings
+  background_image: https://dl.airtable.com/.attachmentThumbnails/4c4dbc66da1091b46b93b5c41532c373/c326ca1f
 - buttons: []
   text: |-
     # Resources
@@ -55,5 +59,10 @@ blocks:
 
     {% assign posts = site.posts %}
     {% include blog-list.html limit=4 thumbnail=true date=false alternate_direction=true %}
+  id: posts
+- text: |-
+    # Partners
+
+    {% include partner-list.html data=site.data.partners %}
   id: posts
 ---

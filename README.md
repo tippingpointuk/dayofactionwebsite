@@ -90,4 +90,14 @@ Use the `nested-blog-list.html` include tag like so:
 {% raw %}{% include nested-blog-list.html data=site.resources share_buttons=true %}{% endraw %}
 ```
 
-###
+### TODO
+
+things still to cover:
+
+* Calendar of trainings/events
+* Blog/posts
+* Demands
+* Map of actions
+* Easy to use content management
+* Logos of partners/groups involved
+* Sign up form

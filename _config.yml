@@ -37,9 +37,9 @@ copyright_notice: # Extra copyright notices, can be markdown formatted
 collections:
   posts:
     permalink: "/posts/:title/"
-  faqs:
-    output: false
   resources:
+    output: true
+  events:
     output: true
 
 
@@ -73,3 +73,14 @@ airtable:
     collection:
       slug: title
       layout: event
+  demands:
+    table: tblhVZrEuEYUXR5eE
+    view: viwcnYEFj6gkBDp0P
+  partners:
+    table: tbla2nFYerhEH7G81
+    view: viwGoEtLQQmvNbfxM
+    fields:
+      - Title
+      - Summary
+      - URL
+      - Image
