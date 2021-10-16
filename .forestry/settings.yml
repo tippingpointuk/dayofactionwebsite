@@ -30,7 +30,7 @@ sections:
   templates:
   - resource
 - type: jekyll-posts
-  label: Stories
+  label: Posts
   create: all
   templates:
   - stories
