@@ -27,9 +27,12 @@ fields:
 - type: file
   name: logo
   label: logo
+  description: A rectangular logo to go in the top right of the website
 - type: file
   name: logo_light
   label: logo_light
+  description: A rectangular logo that goes in the footer. Looks good as just white,
+    with transparent background.
 - type: file
   name: logo_square
   label: logo_square
@@ -51,6 +54,7 @@ fields:
 - type: text
   name: counter
   label: Count down to...
+  description: The date the site is counting down to.
 - type: field_group_list
   name: nav_links
   label: Navigation Links
