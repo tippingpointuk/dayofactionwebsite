@@ -5,8 +5,7 @@ description: |-
   This is why the important thing is important.
 
   I am telling you, it is really imporant.
-url: https://tippingpointuk.github.io
-baseurl: /dayofactionwebsite
+url: https://doa.netlify.app/
 theme: jekyll-theme-chaos
 permalink: pretty
 
@@ -68,3 +67,9 @@ airtable:
     collection:
       slug: title
       layout: post
+  events:
+    table: tblrvnbLp9nHx9Syi
+    view: viwBMRHYXHIJh6kIB
+    collection:
+      slug: title
+      layout: event
