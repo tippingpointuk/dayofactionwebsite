@@ -4,9 +4,11 @@ auto_deploy: false
 admin_path: admin
 webhook_url: ''
 sections:
+- type: heading
+  label: Pages
 - type: document
   path: index.md
-  label: Home Page
+  label: Home
 - type: directory
   path: ''
   label: All Pages
