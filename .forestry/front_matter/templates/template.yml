@@ -9,5 +9,3 @@ fields:
   name: slug
   label: slug
   hidden: true
-pages:
-- _templates/an-event.md

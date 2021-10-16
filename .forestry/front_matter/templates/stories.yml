@@ -56,5 +56,3 @@ fields:
   type: tag_list
   default: []
   label: Tags
-pages:
-- _posts/2021-09-17-protest-outside-first-ever-barclays-bank.md

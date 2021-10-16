@@ -55,5 +55,3 @@ fields:
     schema:
       format: markdown
   label: Summary
-pages:
-- _resources/how-to-make-a-thing.md

@@ -54,9 +54,3 @@ fields:
     schema:
       format: markdown
   label: Summary
-pages:
-- faqs.md
-- partners.md
-- resources.md
-- stories.md
-- trainings.md
