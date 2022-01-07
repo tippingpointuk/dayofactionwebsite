@@ -8,11 +8,10 @@ gem "jekyll", "~> 4.2.0"
 
 gem 'nokogiri'
 
-# gem "jekyll-theme-chaos" # Latest version
-gem "jekyll-theme-chaos", git: "https://github.com/tippingpointuk/jekyll-theme-chaos", branch: "v0.1.1"
+gem "jekyll-theme-chaos" # Latest version
 
 group :jekyll_plugins do
-  gem "jekyll-airtable-import", git: "https://github.com/tippingpointuk/jekyll-airtable-import/", branch: "v0.1.1"
+  gem "jekyll-airtable-import"
 end
 
 # Performance-booster for watching directories on Windows

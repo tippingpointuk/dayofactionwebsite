@@ -43,13 +43,14 @@ collections:
     output: true
 
 
+
+plugins:
+- jekyll-airtable-import # See configuration below
+- jekyll-menus # Only included to use the Forestry Menus option
+
 # Import collections and data from Airtable - for the majority of content
 # management. See https://tippingpointuk.github.io/jekyll-airtable-import for
 # more info.
-plugins:
-- jekyll-airtable-import
-- jekyll-menus # Only included to use the Forestry Menus option
-
 airtable:
   faqs:
     app: appHld1J1pbRWx2hD

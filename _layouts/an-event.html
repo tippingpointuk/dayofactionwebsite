@@ -44,7 +44,14 @@ layout: page
 </address>
 <p><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{ page.location.location.latitude }}%2C{{ page.location.location.longitude }}">Get directions...</a></p>
 {% endcapture %}
+
 {% capture map %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 <div id="Single-Action-Map" map_location="{{ page.location | jsonify | url_encode | replace: "+", "%20" }}"></div>
 <script type="text/javascript" src="/assets/js/an-event-page.js"> </script>
 {% endcapture %}
